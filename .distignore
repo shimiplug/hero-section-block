@@ -1,0 +1,13 @@
+/.git
+/.github
+/node_modules
+/src
+/tests
+/.distignore
+/.eslintrc.js
+/.gitignore
+/package.json
+/package-lock.json
+/webpack.config.js
+/todo.txt
+/hero-section-block.zip

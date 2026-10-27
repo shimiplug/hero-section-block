@@ -1,0 +1,61 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "hero-section/hero-section",
+  "version": "1.0.0",
+  "title": "Hero Section Block",
+  "category": "widgets",
+  "description": "Create responsive hero sections with headings, background options, and buttons in the block editor.",
+  "keywords": ["hero section block", "hero section", "block"],
+  "textdomain": "hero-section",
+  "attributes": {
+    "alignment": {
+      "type": "string",
+      "default": "center"
+    },
+    "data": {
+      "type": "object",
+      "default": {
+        "title": "Create responsive hero sections in WordPress",
+        "des": " Add headings, flexible background styles, and call-to-action buttons—perfectly responsive on all devices",
+        "btn": {
+          "link": "#",
+          "text": "Get Started",
+          "newTab": true
+        },
+        "imageId": 0
+      }
+    },
+    "styles": {
+      "type": "object",
+      "default": {
+        "title": "#ffffff",
+        "des": "#ffffff",
+        "btn": {
+          "color": "#ffffff",
+          "bg": "#2563eb"
+        },
+        "overlay": 0.55
+      }
+    },
+    "colors": {
+      "type": "object",
+      "default": {
+        "color": "black",
+        "bg": "#B1C5A4"
+      }
+    }
+  },
+  "supports": {
+    "align": ["wide", "full"],
+    "html": false
+  },
+  "example": {
+    "attributes": {}
+  },
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./index.css",
+  "style": "file:./view.css",
+  "render": "file:./render.php",
+  "viewScript": "file:./view.js"
+}

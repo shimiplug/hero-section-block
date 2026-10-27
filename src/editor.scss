@@ -1,0 +1,10 @@
+/* Inspector chrome for the block's tab panel. */
+
+.activeTab {
+	border-bottom: 3px solid #6366F1;
+}
+
+.components-tab-panel__tabs {
+	display: flex;
+	justify-content: space-around;
+}

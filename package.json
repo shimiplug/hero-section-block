@@ -1,0 +1,34 @@
+{
+  "name": "hero-section",
+  "version": "1.0.0",
+  "description": "Create responsive hero sections with headings, background options, and buttons in the block editor.",
+  "author": "CamelPlug26",
+  "license": "GPL-3.0-or-later",
+  "main": "build/index.js",
+  "scripts": {
+    "packages-update": "wp-scripts packages-update",
+    "lint": "eslint src",
+    "lint:css": "wp-scripts lint-style",
+    "lint:js": "wp-scripts lint-js",
+    "test": "node tests/editor-smoke.js && node tests/frontend-compat.js",
+    "test:editor": "node tests/editor-smoke.js",
+    "test:frontend": "node tests/frontend-compat.js",
+    "test:render": "php tests/render-compat.php",
+    "format": "wp-scripts format",
+    "start": "wp-scripts start --webpack-copy-php",
+    "build": "wp-scripts build --webpack-copy-php",
+    "i18n-pot": "wp i18n make-pot . languages/hero-section.pot --exclude=\"src,tests,node_modules\" && cp ./languages/hero-section.pot ./languages/hero-section-en_US.po",
+    "i18n-json": "wp i18n make-json languages/ --no-purge",
+    "i18n-mo": "wp i18n make-mo languages/",
+    "i18n": "npm run i18n-pot && npm run i18n-json && npm run i18n-mo",
+    "plugin-zip": "wp-scripts plugin-zip",
+    "bundle": "npm run lint && npm run build && npm run test && npm run i18n && npm run plugin-zip"
+  },
+  "dependencies": {
+    "immer": "^10.1.1"
+  },
+  "devDependencies": {
+    "@wordpress/scripts": "^27.9.0",
+    "eslint-webpack-plugin": "^4.2.0"
+  }
+}
